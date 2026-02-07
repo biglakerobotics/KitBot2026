@@ -6,9 +6,8 @@ package frc.robot;
 
 import frc.robot.commands.Drive;
 
-import frc.robot.commands.ShootCoral;
 import frc.robot.subsystems.DriveTrain;
-import frc.robot.subsystems.Shooter;
+import frc.robot.subsystems.FuelManipulator;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
@@ -25,8 +24,7 @@ public class RobotContainer {
 
   // The robot's subsystems and commands are defined here...
  public final DriveTrain m_driveTrain = new DriveTrain();
- public final Shooter mShooter = new Shooter();
- public final ShootCoral mShootCoral = new ShootCoral(mShooter);
+ public final FuelManipulator mShooter = new FuelManipulator();
 
   //Joystick
   private final CommandXboxController joystick1 = new CommandXboxController(Constants.joyPort);
@@ -55,7 +53,7 @@ public class RobotContainer {
    * joysticks}.
    */
   private void configureBindings() {
-      joystick1.a().whileTrue(mShootCoral);
+    
   }
 
   /**

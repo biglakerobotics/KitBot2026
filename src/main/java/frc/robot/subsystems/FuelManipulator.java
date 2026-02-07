@@ -9,12 +9,12 @@ import com.revrobotics.spark.config.SparkBaseConfig.IdleMode;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
-public class Shooter extends SubsystemBase {
+public class FuelManipulator extends SubsystemBase {
     SparkMax shootMotor = new SparkMax(Constants.motorShooter, MotorType.kBrushed);
     SparkMax intakeMotor = new SparkMax(Constants.motorIntake, MotorType.kBrushed);
 
 
-    public Shooter() {
+    public FuelManipulator() {
 
         //before
         // leftLeader = new SparkMax(Constants.motorLLead, MotorType.kBrushed);
@@ -44,13 +44,17 @@ public class Shooter extends SubsystemBase {
         intakeMotor.configure(intakeConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
     }
 
-    public void depositCoral(){
+    public void ActivateIntake(){
         shootMotor.set(-Constants.shootSpeed);
         intakeMotor.set(-Constants.shootSpeed);
     }
 
-    public void stopMotor() {
+    public void StopManipulators() {
         shootMotor.set(0);
         intakeMotor.set(0);
+    }
+    public void ActivateShooter(){
+        shootMotor.set(-Constants.shootSpeed);
+        intakeMotor.set(Constants.shootSpeed);
     }
 }
