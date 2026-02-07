@@ -25,6 +25,7 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
  public final DriveTrain m_driveTrain = new DriveTrain();
  public final FuelManipulator mShooter = new FuelManipulator();
+ public final FuelManipulator mFuelManipulator = new FuelManipulator();
 
   //Joystick
   private final CommandXboxController joystick1 = new CommandXboxController(Constants.joyPort);
@@ -38,9 +39,6 @@ public class RobotContainer {
     // Configure the trigger bindings
     configureBindings();
     m_driveTrain.setDefaultCommand(new Drive(joystick1, m_driveTrain));
-
-    
-
   }
 
   /**
@@ -53,7 +51,7 @@ public class RobotContainer {
    * joysticks}.
    */
   private void configureBindings() {
-    
+
   }
 
   /**
