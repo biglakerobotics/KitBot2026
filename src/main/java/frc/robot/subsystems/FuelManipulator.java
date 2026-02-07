@@ -48,7 +48,7 @@ public class FuelManipulator extends SubsystemBase {
         shootMotor.set(-Constants.shootSpeed);
         intakeMotor.set(-Constants.shootSpeed);
     }
-
+    
     public void ActivateShooter(){
         shootMotor.set(-Constants.shootSpeed);
         intakeMotor.set(Constants.shootSpeed);

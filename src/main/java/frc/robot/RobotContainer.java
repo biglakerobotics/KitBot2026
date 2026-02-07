@@ -24,6 +24,7 @@ public class RobotContainer {
 
   // The robot's subsystems and commands are defined here...
  public final DriveTrain m_driveTrain = new DriveTrain();
+ public final FuelManipulator mShooter = new FuelManipulator();
  public final FuelManipulator mFuelManipulator = new FuelManipulator();
 
   //Joystick
@@ -50,7 +51,7 @@ public class RobotContainer {
    * joysticks}.
    */
   private void configureBindings() {
-    
+
   }
 
   /**
