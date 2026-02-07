@@ -4,8 +4,6 @@
 
 package frc.robot;
 
-import frc.robot.commands.ActivateIntake;
-import frc.robot.commands.ActivateShooter;
 import frc.robot.commands.Drive;
 
 import frc.robot.subsystems.DriveTrain;
@@ -26,6 +24,7 @@ public class RobotContainer {
 
   // The robot's subsystems and commands are defined here...
  public final DriveTrain m_driveTrain = new DriveTrain();
+ public final FuelManipulator mShooter = new FuelManipulator();
  public final FuelManipulator mFuelManipulator = new FuelManipulator();
 
   //Joystick
@@ -52,8 +51,7 @@ public class RobotContainer {
    * joysticks}.
    */
   private void configureBindings() {
-      joystick1.a().whileTrue(new ActivateIntake(mFuelManipulator));
-      joystick1.b().whileTrue(new ActivateShooter(mFuelManipulator));
+
   }
 
   /**
